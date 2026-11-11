@@ -83,6 +83,30 @@ The design goal was an app that staff behind a busy counter can use quickly with
 - **Matching print output.** The PDF invoices and prescriptions use the store's own header and footer artwork, with Quicksand for display text and Roboto Mono for figures, so printed documents look like the store's brand.
 - **Bottom-nav shell.** Dashboard, Customers, New Sale, Cashbook and Settings, with *New Sale* in the centre because it is the most frequent action.
 
+## Generated documents
+
+Invoices and prescriptions are generated **on the device**, with no server or third-party PDF library. `PdfGenerator` draws each A4 page directly with Android's `PdfDocument` and `Canvas` APIs:
+
+- The store's own **header and footer artwork** frame every page, with the shop phone number, address and a closing message
+- **Quicksand** is used for labels and headings and **Roboto Mono** for figures, so amounts and powers line up in columns
+- **Invoice:** billed-to and invoice-summary panels, an itemised table, payment history, and a totals block with discount, net, received and a red **balance due**
+- **Prescription ("Vision Rx"):** patient and Rx details, an OD/OS power table (SPH · CYL · Axis · Add · V/A), and PD/PSM measurements
+- Long text wraps to fit its column, and internal item notes are never printed on the bill
+- The finished PDF can be **viewed**, **shared**, or **sent to the customer's WhatsApp** in one tap through a `FileProvider` URI
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="screenshots/sample-invoice.pdf"><img src="screenshots/sample-invoice.png" alt="Generated invoice PDF" width="380"></a><br>
+      <sub><b>Invoice</b> · <a href="screenshots/sample-invoice.pdf">open PDF</a></sub>
+    </td>
+    <td align="center">
+      <a href="screenshots/sample-prescription.pdf"><img src="screenshots/sample-prescription.png" alt="Generated prescription PDF" width="380"></a><br>
+      <sub><b>Prescription</b> · <a href="screenshots/sample-prescription.pdf">open PDF</a></sub>
+    </td>
+  </tr>
+</table>
+
 ## Architecture & tech
 
 | Concern | Choice |
