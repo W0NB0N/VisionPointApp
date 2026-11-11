@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:translateX="21.6"
+        android:translateY="21.6">
+        <!-- Eyeglasses frame -->
+        <!-- Left Lens rim -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="5"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M18,48 C18,36 30,34 42,34 C54,34 56,40 56,48 C56,62 48,74 38,74 C26,74 18,62 18,48 Z" />
+        <!-- Right Lens rim -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="5"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M52,48 C52,40 54,34 66,34 C78,34 90,36 90,48 C90,62 82,74 70,74 C60,74 52,62 52,48 Z" />
+        <!-- Bridge -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="5"
+            android:strokeLineCap="round"
+            android:pathData="M42,42 C48,37 60,37 66,42" />
+        <!-- Left Temple -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#97F0FF"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"
+            android:pathData="M18,42 L6,38" />
+        <!-- Right Temple -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#97F0FF"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"
+            android:pathData="M90,42 L102,38" />
+    </group>
+</vector>

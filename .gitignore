@@ -1,0 +1,30 @@
+# Gradle / build
+.gradle/
+.kotlin/
+build/
+app/build/
+app/release/
+*.apk
+*.aab
+
+# IDE
+.idea/
+*.iml
+
+# Local config & secrets
+local.properties
+KeyStore/
+*.jks
+*.keystore
+
+# Separate repository (VP-CRM-backend)
+backend-reference/
+
+# Reference invoices containing real customer data
+images/*-ref'.png
+images/*-reference.pdf
+images/1.pdf*.png
+
+# OS
+.DS_Store
+Thumbs.db
